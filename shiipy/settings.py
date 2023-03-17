@@ -79,10 +79,10 @@ print(url.port) """
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':  config('name'),
-        'USER': config('user_db'),
-        'PASSWORD': config('password_db'),
-        'HOST': config('Host'),
+        'NAME':  config('name'),#'vzycqczs'
+        'USER': config('user_db'),#'vzycqczs'
+        'PASSWORD': config('password_db'),#'Ho7jmbkEq8ScMlWzxFqIoyT_FgI2oEI4'
+        'HOST': config('Host'),#'babar.db.elephantsql.com'
         'PORT': '',
     }
 }
