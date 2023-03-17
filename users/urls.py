@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import UserList,UserDetail
-
+from .api import UserList, UserDetail
+"""
+Rutas para usurios
+"""
 urlpatterns = [
-    path('',UserList.as_view(),name='user-list'),
-    path('<int:pk>',UserDetail.as_view(),name='user-detail'),
+    path('', UserList.as_view(), name='user-list'),
+    path('<int:pk>', UserDetail.as_view(), name='user-detail'),
 ]
-
-
