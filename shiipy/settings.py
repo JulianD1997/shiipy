@@ -69,15 +69,7 @@ WSGI_APPLICATION = 'shiipy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-""" up.uses_netloc.append('postgres')
-url = up.urlparse(config('url'))
-conn = psycopg2.connect(database=url.path[1:],
-                        user=url.username,
-                        password=url.password,
-                        host=url.hostname,
-                        port=url.port
-                        )
-print(url.port) """
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',

@@ -27,3 +27,16 @@ Las siguientes clases heredan de APIView
     APIView -> Usuario: Devuelve una respuesta HTTP 200 para indicar que fue correctamente borrado
 
 ** Podemos utilizar un cliente para realizar las operaciones GET, POST, PUT y DELETE como postman o Thunder Client
+
+datos para la base de datos
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  vzycqczs,
+        'USER': vzycqczs,
+        'PASSWORD': Ho7jmbkEq8ScMlWzxFqIoyT_FgI2oEI4,
+        'HOST': babar.db.elephantsql.com,
+        'PORT': '',
+    }
+}
