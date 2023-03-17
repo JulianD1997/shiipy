@@ -1,8 +1,6 @@
 from decouple import config
 from pathlib import Path
 
-import psycopg2
-import urllib.parse as up
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
