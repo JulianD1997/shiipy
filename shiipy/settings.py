@@ -1,4 +1,9 @@
+from decouple import config
 from pathlib import Path
+
+import psycopg2
+import urllib.parse as up
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -64,10 +69,23 @@ WSGI_APPLICATION = 'shiipy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+""" up.uses_netloc.append('postgres')
+url = up.urlparse(config('url'))
+conn = psycopg2.connect(database=url.path[1:],
+                        user=url.username,
+                        password=url.password,
+                        host=url.hostname,
+                        port=url.port
+                        )
+print(url.port) """
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':  config('name'),
+        'USER': config('user_db'),
+        'PASSWORD': config('password_db'),
+        'HOST': config('Host'),
+        'PORT': '',
     }
 }
 
