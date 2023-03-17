@@ -1,6 +1,9 @@
 from decouple import config
 from pathlib import Path
 
+import psycopg2
+import urllib.parse as up
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,10 +81,10 @@ print(url.port) """
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vzycqczs',
-        'USER': 'vzycqczs',
-        'PASSWORD': 'Ho7jmbkEq8ScMlWzxFqIoyT_FgI2oEI4',
-        'HOST': 'babar.db.elephantsql.com',
+        'NAME':  config('name'),
+        'USER': config('user_db'),
+        'PASSWORD': config('password_db'),
+        'HOST': config('Host'),
         'PORT': '',
     }
 }
