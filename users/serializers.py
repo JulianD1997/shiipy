@@ -4,7 +4,7 @@ from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
-    ecommerce_store = EcommerceStoreSerializer(many=True,read_only=True)
+    ecommerce_stores = EcommerceStoreSerializer(many=True, read_only=True)
     class Meta:
-        model: User
-        fields = ['id','username','password','email','ecommerce_store']
+        model = User
+        fields = ['id', 'username', 'password', 'email', 'ecommerce_stores']
